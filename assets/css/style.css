@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-body {
+  background-image: linear-gradient(to bottom right, rgb(253, 205, 62), rgb(255, 0, 64));
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.body {
+  position: relative;
+  background-color: white;
+  height: 80%;
+  width: 50%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.gradient-box {
+  background-image: linear-gradient(to bottom right, rgb(255, 115, 0), 50%, rgb(255, 0, 64));
+  width: 20%;
+  height: 65%;
+  margin-left: 190px;
+  position: absolute;
+  z-index: 1;
+  left: 80px;
+  border-radius: 20px;
+
+}
+
+.gradient-box:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, #f89b29 -1%, #ff0f7b 100%);
+  transform: translate3d(0px, 20px, 0) scale(0.95);
+  filter: blur(20px);
+  opacity: var(0.7);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+.gradient-box::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.body .text-part {
+  width: 55%;
+  position: relative;
+}
+
+.body .text-part .bold {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.body .text-part :nth-child(1),
+.body .text-part :nth-child(3) {
+  color: rgb(77, 77, 77);
+  font-size: 13px;
+}
+
+.body .text-part :nth-child(3) {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.body .text-part a {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 14px 30px;
+  color: white;
+  border-radius: 25px;
+  background-image: linear-gradient(to bottom right, rgb(255, 115, 0), 50%, rgb(255, 0, 64));
+}
+
+.changer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.changer .dot1 {
+  position: absolute;
+  background-image: linear-gradient(to bottom right, rgb(230, 230, 230), 50%, rgb(125, 125, 125));
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  top: 120px;
+  cursor: pointer;
+}
+
+.changer .long-line {
+  position: absolute;
+  background-image: linear-gradient(to bottom right, rgb(255, 115, 0), 50%, rgb(255, 0, 64));
+  width: 10px;
+  height: 30px;
+  top: 135px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.changer .dot2 {
+  position: absolute;
+  background-image: linear-gradient(to bottom right, rgb(230, 230, 230), 50%, rgb(125, 125, 125));
+  width: 10px;
+  height: 10px;
+  top: 170px;
+  border-radius: 20px;
+  cursor: pointer;
+}
